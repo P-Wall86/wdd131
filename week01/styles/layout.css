@@ -9,7 +9,7 @@ body {
 header {
     padding: 0.75rem 1rem 0 1rem;
     grid-column: 1/4;
-    background-color: #7E5C43;
+    background-color: #c27251;
     margin: 0;
 }
 
@@ -68,7 +68,7 @@ footer {
     font-size: 15px;
     font-weight: bold;
     grid-column: 1/4;
-    background-color: #7E5C43;
+    background-color: #c27251;
     color: #070B0C;
     text-align: center;
 }
