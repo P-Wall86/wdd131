@@ -1,35 +1,93 @@
-:root {
-    --primary-color: #B7CE63;
-    --secondary-color: #C7D59F;
-    --accent-color: #DADDD8;
-    --fonts: black;
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
 }
 
-body {
-    height: 125vh;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto Condensed", serif;
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-footer {
-    padding: 1rem;
-    font-size: 20px;
-    text-align: center;
-    grid-column: 1/4;
-    background-color: var(--primary-color);
-    color: #070B0C;
+.nav-link {
+    transition: 0.5s ease;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
 }
 
-footer p:nth-of-type(1) {
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 5px;
+.bar {
+    display:block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+    border-radius: 10px;
 }
+@media (max-width: 700px) {
+    .hamburger {
+        display: block;
+        padding: 10px;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
+        display: block;
+        position: fixed;
+        left: -100%;
+        top: 0px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100vw;
+        text-align: right;
+        transition: 0.3s;
+        font-family: 'Roboto Condensed', sans-serif;
+        z-index: 1000;
+        margin-top: 80px;
+        padding-right: 50px;
+    }
 
-footer p:nth-of-type(2) {
-    color: #1f2170;
-    font-weight: bold;
-    font-size: 17px;
-    margin-top: 0;
+    .nav-item {
+        margin: 10px 0;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin: 0 auto; 
+    }
+
+    .gallery figure {
+        margin: 0;
+        padding: 0;
+        display: block;
+        text-align: center;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
 }
