@@ -24,6 +24,7 @@ header {
 
 header h1 {
     margin-left: 0;
+    font-size: x-large;
 }
 
 nav ul {
@@ -33,7 +34,7 @@ nav ul {
 }
 
 nav a {
-    font-size: xx-large;
+    font-size: x-large;
     text-decoration: none;
     color: black;
 }
@@ -59,7 +60,7 @@ main {
 
 main h2 {
     text-align: center;
-    font-size: xx-large;
+    font-size: x-large;
     margin: 5px 0 10px 0 ;
 }
 
@@ -96,6 +97,7 @@ footer {
     grid-column: 1/4;
     background-color: var(--primary-color);
     color: #070B0C;
+    width: 100%;
 }
 
 footer p:nth-of-type(1) {
@@ -109,4 +111,23 @@ footer p:nth-of-type(2) {
     font-weight: bold;
     font-size: 17px;
     margin-top: 0;
+}
+
+.fa-arrow-right {
+    font-size: 20px;
+    padding: 3px;
+    color: black; 
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+@media (min-width: 701px) {
+    .nav-item a.active .fa-arrow-right {
+        color: #DADDD8;
+        transform: scale(1.1);
+    }
+
+    .nav-item a:hover .fa-arrow-right {
+        transform: scale(1.2);
+        color: #1f2170;
+    }
 }

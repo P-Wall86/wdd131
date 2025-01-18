@@ -34,7 +34,6 @@
 @media (max-width: 700px) {
     .hamburger {
         display: block;
-        padding: 10px;
     }
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
@@ -60,14 +59,31 @@
         font-family: 'Roboto Condensed', sans-serif;
         z-index: 1000;
         margin-top: 80px;
-        padding-right: 30px;
+        padding-right: 8px;
+    }
+
+    .nav-menu.active {
+        left: 0;
     }
 
     .nav-item {
         margin: 10px 0;
+        width: 100%;
     }
-    .nav-menu.active {
-        left: 0;
+
+   .nav-item a {
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px 20px; /* Added horizontal padding for better coverage */
+        display: block;
+        width: 100%; /* Ensure the link takes full width of the nav-item */
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-item a:hover {
+        background-color: #4b7b3a;
+        color: white;
+        text-decoration: none;
     }
 
     .gallery {
@@ -93,5 +109,22 @@
         height: auto;
         display: block;
         margin: 0 auto;
+    }
+
+    .fa-arrow-right {
+        font-size: 20px;
+        padding: 3px;
+        color: black; 
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-item a.active .fa-arrow-right {
+        color: #DADDD8;
+        transform: scale(1.1);
+    }
+
+    .nav-item a:hover .fa-arrow-right {
+        transform: scale(1.2);
+        color: #DADDD8;
     }
 }
