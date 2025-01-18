@@ -113,7 +113,7 @@ footer p:nth-of-type(2) {
     margin-top: 0;
 }
 
-.fa-arrow-right {
+.arrow-right {
     font-size: 20px;
     padding: 3px;
     color: black; 
@@ -121,12 +121,12 @@ footer p:nth-of-type(2) {
 }
 
 @media (min-width: 701px) {
-    .nav-item a.active .fa-arrow-right {
+    .nav-item a.active .arrow-right {
         color: #DADDD8;
         transform: scale(1.1);
     }
 
-    .nav-item a:hover .fa-arrow-right {
+    .nav-item a:hover .arrow-right {
         transform: scale(1.2);
         color: #1f2170;
     }
