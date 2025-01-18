@@ -60,7 +60,7 @@
         font-family: 'Roboto Condensed', sans-serif;
         z-index: 1000;
         margin-top: 80px;
-        padding-right: 50px;
+        padding-right: 30px;
     }
 
     .nav-item {
@@ -82,6 +82,10 @@
         padding: 0;
         display: block;
         text-align: center;
+    }
+
+    .gallery figcaption {
+        margin: 10px 0 0;
     }
 
     .gallery img {
