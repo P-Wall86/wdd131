@@ -111,20 +111,9 @@
         margin: 0 auto;
     }
 
-    .arrow-right {
-        font-size: 20px;
-        padding: 3px;
-        color: black; 
-        transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .nav-item a.active .arrow-right {
-        color: #DADDD8;
-        transform: scale(1.1);
-    }
-
-    .nav-item a:hover .arrow-right {
-        transform: scale(1.2);
-        color: #DADDD8;
+    .nav-link.active {
+        color: var(--fonts);
+        background-color: var(--secondary-color);
+        padding: 20px;
     }
 }
