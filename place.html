@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argentina</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Argentina</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 550px)">
+                <img src="images/hero-large.webp" alt="Perito Moreno Glacier" width="1500" height="1000">
+            </picture>
+        </div>
+        <section class="box1">
+            <h2>Data</h2>
+            <dl class="info-list">
+                <dt>Area</dt>
+                <dd>2,780,400 km2</dd>
+                <dt>Population</dt>
+                <dd>47,067,441</dd>
+                <dt>Capital</dt>
+                <dd>Buenos Aires</dd>
+                <dt>Languages</dt>
+                <dd>Spanish</dd>
+                <dt>Currency</dt>
+                <dd>Argentine peso</dd>
+                <dt>Time Zone</dt>
+                <dd>UTC-3</dd>
+                <dt>Calling Code</dt>
+                <dd>+54</dd>
+                <dt>Internet TLD</dt>
+                <dd>.ar</dd>
+            </dl>
+        </section>
+        <section class="box2">
+            <h2>
+                <img src="images/weather.svg" alt="Weather Icon" width="50" height="50">
+                Weather <span class="icon-spacing">⛅️</span>
+            </h2>
+                <dl class="info-list">
+                    <dt>Temperature:</dt>
+                    <dd>35° C</dd>
+                    <dt>Conditions:</dt>
+                    <dd>Sunny</dd>
+                    <dt>Wind:</dt>
+                    <dd>20 km/h</dd>
+                    <dt>Wind Chill:</dt>
+                    <dd>N/A</dd>
+                </dl>
+        </section>  
+    </main>
+    <footer>
+        <p><span id="currentyear"></span></p>
+        <p><span id="lastmodified"></span></p>
+    </footer>
+</body>
+</html>
