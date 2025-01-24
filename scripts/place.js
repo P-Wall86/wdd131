@@ -13,7 +13,7 @@ function calculateWindChill(temperature, windSpeed) {
 
   if (temperature <= 10 && windSpeed > 4.8) {
     const windChill = calculateWindChill(temperature, windSpeed);
-    document.getElementById("wind-chill-value").innerHTML = `Windchill: ${windChill}°C`;
+    document.getElementById("wind-chill-value").innerHTML = `${windChill.toFixed(1)}°C`;
 } else {
   document.getElementById("wind-chill-value").innerHTML = "N/A";
 }
