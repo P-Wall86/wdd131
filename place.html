@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Argentina</title>
+    <meta name="description" content="This page contains info about my country, Argentina. It is made to test responsiveness in small and larger views.">
+    <meta name="author" content="Pamela Pared">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
@@ -23,6 +25,7 @@
                 <img src="images/hero-large.webp" alt="Iguazu Falls-Argentinian Side" width="1500" height="1000">
             </picture>
         </div>
+        <div class="box-container">
         <section class="box1">
             <h2>Data</h2>
             <div class="column1">
@@ -60,18 +63,19 @@
                         <li><strong>Temperature:</strong></li>
                         <li><strong>Conditions:</strong></li>
                         <li><strong>Wind:</strong></li>
-                        <li><strong>Wind Chill:</li></strong></li>
+                        <li><strong>Wind Chill:</strong></li>
                     </ul>
                 </div>
                 <div class="column2">
                     <ul class="data-list">     
-                        <li>35° C</li>
+                        <li>34° C</li>
                         <li>Sunny</li>
-                        <li>20 km/h</li>
-                        <li>N/A</li>
+                        <li>10 km/h</li>
+                        <li id="wind-chill-value">N/A</li>
                     </ul>
                 </div>
-        </section>  
+        </section>
+    </div> 
     </main>
     <footer>
         <p><span id="currentyear"></span></p>
