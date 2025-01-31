@@ -131,6 +131,8 @@ function createTempleCard(templesToDisplay) {
         templeArea.innerHTML = `<span class="label">Area:</span> ${temple.area} sq. ft`;
         templeImage.setAttribute('src', temple.imageUrl);
         templeImage.setAttribute('alt', `${temple.templeName} Temple`);
+        templeImage.setAttribute('width', '400');
+        templeImage.setAttribute('height', '250');
         templeImage.setAttribute('loading', 'lazy');
 
         templeCard.appendChild(templeName);
