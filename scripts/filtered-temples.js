@@ -96,7 +96,7 @@ const temples = [
     {
       templeName: "Buenos Aires Argentina",
       location: "Buenos Aires, Argentina",
-      dedicated: "1986, January, 1719",
+      dedicated: "1986, January, 17-19",
       area: 116642,
       imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/buenos-aires-argentina/400x250/buenos-aires-argentina-temple-lds-236979-wallpaper.jpg"
@@ -111,13 +111,15 @@ const temples = [
     },
     
   ];
-  
-createTempleCard();
 
-function createTempleCard() {
-    temples.forEach(temple => {
+function createTempleCard(templesToDisplay) {
+   console.log(templesToDisplay); 
+  const gallery = document.querySelector(".gallery");
+  gallery.innerHTML = "";
+  
+  templesToDisplay.forEach(temple => {
         let templeCard = document.createElement('section');
-        let templeName = document.createElement('h3');
+        let templeName = document.createElement('h2');
         let templeLocation = document.createElement('p');
         let templeDedicated = document.createElement('p');
         let templeArea = document.createElement('p');
@@ -141,3 +143,63 @@ function createTempleCard() {
 });
 }
 
+function filterTemples(category) {
+  let filteredTemples;
+  switch (category) {
+    case "old":
+      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 2000);
+      break;
+    case "new":
+      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() >= 2000);
+      break;
+    case "large":
+      filteredTemples = temples.filter(temple => temple.area > 50000);
+      break;
+    case "small":
+      filteredTemples = temples.filter(temple => temple.area <= 50000);
+      break;
+    default:
+      filteredTemples = temples;
+      break;
+  }
+  createTempleCard(filteredTemples);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  createTempleCard(temples);
+});
+
+document.querySelector("#old").addEventListener("click", function(event) {
+  event.preventDefault();
+  setActiveLink(this);
+  filterTemples("old");
+});
+
+document.querySelector("#new").addEventListener("click", function(event) {
+  event.preventDefault();
+  setActiveLink(this);
+  filterTemples("new");
+});
+
+document.querySelector("#large").addEventListener("click", function(event) {
+  event.preventDefault();
+  setActiveLink(this);
+  filterTemples("large");
+});
+
+document.querySelector("#small").addEventListener("click", function(event) {
+  event.preventDefault();
+  setActiveLink(this);
+  filterTemples("small");
+});
+
+document.querySelector("#home").addEventListener("click", function(event) {
+  event.preventDefault();
+  setActiveLink(this);
+  filterTemples("all");
+});
+
+function setActiveLink(selectedLink) {
+  document.querySelectorAll("nav a").forEach(link => link.classList.remove("active"));
+  selectedLink.classList.add("active");
+}
