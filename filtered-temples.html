@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description" content="This page contains a temple picture gallery. It is made to test responsiveness in small and larger views.">
+    <meta name="author" content="Pamela Pared">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+      
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav class="navbar">
+            <span class="hamburger">    
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <ul class="nav-menu">
+                <li class ="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class ="nav-item">
+                    <a class="nav-link" href="#">Old</a>
+                </li>
+                <li class ="nav-item">
+                    <a class="nav-link" href="#">New</a>
+                </li>
+                <li class ="nav-item">
+                    <a class="nav-link" href="#">Large</a>
+                </li>
+                <li class ="nav-item">
+                    <a class="nav-link" href="#">Small</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Temples</h2>
+        <div class="gallery">
+        </div>
+    </main>
+        <footer>
+            <p><span id="currentyear"></span></p>
+            <p><span id="lastmodified"></span></p>
+        </footer>
+    </body>
+</html>

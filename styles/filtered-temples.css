@@ -1,0 +1,119 @@
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    transition: 0.5s ease;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display:block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+    border-radius: 10px;
+}
+@media (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu {
+        display: block;
+        position: fixed;
+        left: -100%;
+        top: 0px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100vw;
+        text-align: right;
+        transition: 0.3s;
+        font-family: 'Roboto Condensed', sans-serif;
+        z-index: 1000;
+        margin-top: 80px;
+        padding-right: 8px;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+   .nav-item a {
+        text-decoration: none;
+        font-size: 20px;
+        padding: 10px 20px; /* Added horizontal padding for better coverage */
+        display: block;
+        width: 100%; /* Ensure the link takes full width of the nav-item */
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-item a:hover {
+        background-color: #4b7b3a;
+        color: white;
+        text-decoration: none;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin: 0 auto; 
+    }
+
+    .gallery figure {
+        margin: 0;
+        padding: 0;
+        display: block;
+        text-align: center;
+    }
+
+    .gallery figcaption {
+        margin: 10px 0 0;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .nav-link.active {
+        color: var(--fonts);
+        background-color: var(--secondary-color);
+        padding: 20px;
+    }
+}
