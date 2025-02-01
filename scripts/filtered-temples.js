@@ -166,10 +166,10 @@ function filterTemples(category) {
   }
 
   if (filteredTemples.length > 0) {
-    const firstTempleImage = filteredTemples[0].imageUrl;  // assuming the temple object has imageUrl
+    const firstTempleImage = filteredTemples[0].imageUrl;
     preloadImage(firstTempleImage);
   }
-  
+
   createTempleCard(filteredTemples);
 }
 
