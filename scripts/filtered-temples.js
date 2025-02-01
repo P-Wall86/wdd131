@@ -164,6 +164,12 @@ function filterTemples(category) {
       filteredTemples = temples;
       break;
   }
+
+  if (filteredTemples.length > 0) {
+    const firstTempleImage = filteredTemples[0].imageUrl;  // assuming the temple object has imageUrl
+    preloadImage(firstTempleImage);
+  }
+  
   createTempleCard(filteredTemples);
 }
 
