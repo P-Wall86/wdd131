@@ -165,11 +165,6 @@ function filterTemples(category) {
       break;
   }
 
-  if (filteredTemples.length > 0) {
-    const firstTempleImage = filteredTemples[0].imageUrl;
-    preloadImage(firstTempleImage);
-  }
-
   createTempleCard(filteredTemples);
 }
 
