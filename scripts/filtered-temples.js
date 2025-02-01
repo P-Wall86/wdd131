@@ -150,28 +150,18 @@ function filterTemples(category) {
   switch (category) {
     case "old":
       filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 2000);
-      filteredTemples.sort((a, b) => new Date(a.dedicated) - new Date(b.dedicated));
-      filteredTemples.sort((a, b) => a.area - b.area);
       break;
     case "new":
       filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() >= 2000);
-      filteredTemples.sort((a, b) => new Date(a.dedicated) - new Date(b.dedicated));
-      filteredTemples.sort((a, b) => a.area - b.area);
       break;
     case "large":
-      filteredTemples = temples.filter(temple => temple.area > 50000);
-      filteredTemples.sort((a, b) => new Date(a.dedicated) - new Date(b.dedicated));
-      filteredTemples.sort((a, b) => b.area - a.area);
+      filteredTemples = temples.filter(temple => temple.area > 90000);
       break;
     case "small":
-      filteredTemples = temples.filter(temple => temple.area <= 50000);
-      filteredTemples.sort((a, b) => new Date(a.dedicated) - new Date(b.dedicated));
-      filteredTemples.sort((a, b) => a.area - b.area);
+      filteredTemples = temples.filter(temple => temple.area < 10000);
       break;
     default:
       filteredTemples = temples;
-      filteredTemples.sort((a, b) => new Date(a.dedicated) - new Date(b.dedicated));
-      filteredTemples.sort((a, b) => a.area - b.area);
       break;
   }
   createTempleCard(filteredTemples);
