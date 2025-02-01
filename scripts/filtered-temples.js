@@ -149,7 +149,7 @@ function filterTemples(category) {
   let filteredTemples;
   switch (category) {
     case "old":
-      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 2000);
+      filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
       break;
     case "new":
       filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() >= 2000);
