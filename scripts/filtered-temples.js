@@ -160,6 +160,9 @@ function filterTemples(category) {
     case "small":
       filteredTemples = temples.filter(temple => temple.area < 10000);
       break;
+      case "all":
+      filteredTemples = temples;
+      break;
     default:
       filteredTemples = temples;
       break;
