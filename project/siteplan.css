@@ -5,4 +5,15 @@
             display: block;
             margin: 0 auto;
         }
-    }
+
+        .desktop-wireframe {
+            display: none;
+        }
+
+        .mobile-wireframe {
+            display:block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+}
