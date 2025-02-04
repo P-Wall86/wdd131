@@ -7,9 +7,9 @@
         }
 
         .desktop-wireframe {
-            display: none;
+            display:none;
         }
-
+        
         .mobile-wireframe {
             display:block;
             max-width: 100%;
