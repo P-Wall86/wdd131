@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Review</title>
+</head>
+<body>
+  <h1>Review</h1>
+  <p>Total reviews completed: <span id="review-count"></span></p>
+
+  <script>
+    const reviewCount = localStorage.getItem("reviewCount");
+    document.getElementById("review-count").textContent = reviewCount;
+  </script>
+</body>
+</html>

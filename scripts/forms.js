@@ -27,10 +27,12 @@ function populateProductDropdown() {
 } 
 
 function handleFormSubmission() {
+    alert("Form submitted!");
     let reviewCount = localStorage.getItem("reviewCount") || 0;
     reviewCount = parseInt(reviewCount) + 1;
     localStorage.setItem("reviewCount", reviewCount);
     console.log(`Total reviews submitted: ${reviewCount}`);
+    window.location.href = "review.html";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
