@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page contains a temple picture gallery. It is made to test responsiveness in small and larger views.">
+    <meta name="author" content="Pamela Pared">
     <title>Product Review</title>
-
     <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/form-large.css">
     <script src="scripts/forms.js" defer></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -18,55 +18,55 @@
         <h1>Product Review</h1>
     </header>
     <main>
-        <form>
+        <form method="get" action="review.html">
             <label for="product">Product Name</label>
-            <select id="product" name="product">
+            <select id="product" name="product" tabindex="1">
                 <option value="" disabled selected>Choose an option</option>
             </select>
 
-            <label>Overall Rating</label>
+            <label for="rating">Overall Rating</label>
             <div class="stars">
-                <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
-                <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
-                <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
-                <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
-                <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+                <input type="radio" id="fivestar" name="stars" value="5" tabindex="2" required><label for="fivestar" tabindex="2"></label>
+                <input type="radio" id="fourstar" name="stars" value="4" tabindex="3" required><label for="fourstar" tabindex="3"></label>
+                <input type="radio" id="threestar" name="stars" value="3" tabindex="4" required><label for="threestar" tabindex="4"></label>
+                <input type="radio" id="twostar" name="stars" value="2" tabindex="5" required><label for="twostar" tabindex="5"></label>
+                <input type="radio" id="onestar" name="stars" value="1" tabindex="6" required><label for="onestar" tabindex="6"></label>
             </div>
 
             <label for="installation-date">Date of Installation</label>
-            <input type="date" id="installation-date" name="installation-date" required>
+            <input type="date" id="installation-date" name="installation-date" tabindex="7" required>
 
-            <label>Which features did you find useful in the product? (Check all that apply)</label>
+            <label for="features">Which features did you find useful in the product? (Check all that apply)</label>
 
         <div class="checkboxes">
             <div>
-            <input type="checkbox" id="durability" name="features" value="Durability">
+            <input type="checkbox" id="durability" name="features" value="Durability" tabindex="8">
             <label for="durability">Durability</label>
             </div>
 
             <div>
-            <input type="checkbox" id="ease-of-use" name="features" value="Ease of Use">
+            <input type="checkbox" id="ease-of-use" name="features" value="Ease of Use" tabindex="9">
             <label for="ease-of-use">Ease of Use</label>
             </div>
 
             <div>
-            <input type="checkbox" id="performance" name="features" value="Performance">
+            <input type="checkbox" id="performance" name="features" value="Performance" tabindex="10">
             <label for="performance">Performance</label>
             </div>
 
             <div>
-            <input type="checkbox" id="design" name="features" value="Design">
+            <input type="checkbox" id="design" name="features" value="Design" tabindex="11">
             <label for="design">Design</label>
             </div>
         </div>
 
             <label for="review">Written Review (Optional)</label>
-            <textarea id="review" name="review"></textarea>
+            <textarea id="review" name="review" tabindex="12"></textarea>
 
             <label for="username">Your Name (Optional)</label>
-            <input type="text" id="username" name="username">
+            <input type="text" id="username" name="username" tabindex="13">
 
-            <input type="submit" value="Post Review">
+            <input type="submit" value="Post Review" tabindex="14">
         </form>
     </main>
     <footer>
