@@ -1,0 +1,24 @@
+@media (max-width:750px) {
+    header, main, footer {
+        width: 100%; /* Make content take more of the screen width */
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    label {
+        font-size: large;
+    }
+
+    footer {
+        font-size: 18px;
+}}
+
+@media (min-width:751px) {
+    header, main, footer {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }    
+}
