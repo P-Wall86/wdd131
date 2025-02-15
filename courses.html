@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - York English Academy</title>
+    <meta name="description" content="Page of the courses available at York English Academy to provide information about the most relevant of them.">
+    <meta name="author" content="Pamela Pared">
+    <link rel="stylesheet" href="styles/courses-large.css">
+    <link rel="stylesheet" href="styles/courses.css">
+    <script src="scripts/courses.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bevan&family=Cutive&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <header>
+        <img src="images/logo1.webp" alt="logo" width="200" height="190" loading=lazy>
+        
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        
+        <div class="nav">
+        <ul>
+            <li><a href="home.html">Welcome</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="#">Staff</a></li>
+            <li><a href="contact-us.html" class="active">Contact Us</a></li>
+        </ul>
+        </div> 
+    </header>
+    <main>
+        <h1>Our Courses</h1>
+
+        <div id="card-container">
+            <button id="prev-card">&lt;</button>
+            <div class="card"></div>
+            <button id="next-card">&gt;</button>
+        </div>
+
+        <section class="certifications">
+            <h2>Certifications</h2>
+            <div class="certifications-content">
+                <ul class="certification-list">
+                    <li><a href="#" data-cert="ielts">IELTS</a></li>
+                    <li><a href="#" data-cert="toefl">TOEFL</a></li>
+                    <li><a href="#" data-cert="first-cert">First Cert</a></li>
+                    <li><a href="#" data-cert="cambridge-advanced">Cambridge Advanced</a></li>
+                    <li><a href="#" data-cert="proficiency">Proficiency</a></li>
+                </ul>
+                <div class="certification-info">
+                    <h3 id="cert-title">Select a Certification</h3>
+                    <p id="cert-info">Click on a certification to see more details.</p>
+                </div>
+            </div>
+        </section>
+        <div class="cta">
+            <p>Found a course you like?</p>
+            <a href="contact-us.html" class="cta-button">Apply now!</a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <p><span id="currentyear"></span></p>
+            <p><span id="lastmodified"></span></p>
+        </div>
+        
+        <div class="footer-social">
+            <img src="images/fb.svg" alt="facebook" width="25" height="25" loading=lazy>
+            <img src="images/insta.svg" alt="insta" width="25" height="25" loading=lazy>
+            <img src="images/tiktok.svg" alt="tiktok" width="25" height="25" loading=lazy>
+            <img src="images/x_icon.svg" alt="x_twitter" width="25" height="25" loading=lazy>
+        </div>
+
+        <div class="footer-right">
+        <a href="#" target="_blank">FAQ</a>
+        <a href="contact-us.html" target="_blank">Contact Us</a>
+        </div>
+    </footer>
+</body>
+</html>
